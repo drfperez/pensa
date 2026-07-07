@@ -2,11 +2,7 @@
 
 > El llenguatge de programació educatiu en català per aprendre a pensar abans de programar.
 
-https://img.shields.io/badge/versió-0.4-blue
-https://img.shields.io/badge/estat-prototip-orange
-https://img.shields.io/badge/llicència-MIT-green
 
----
 
 # 📖 Què és Pensa?
 
