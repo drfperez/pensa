@@ -1,0 +1,14 @@
+mostra "Pensa v0.4"
+funcio saluda
+mostra "Hola"
+acaba
+crida saluda
+guarda [1,2,3] dins nums
+per cada n dins nums
+mostra n
+acaba
+guarda 0 dins c
+mentre c < 3
+mostra c
+suma 1 a c
+acaba
