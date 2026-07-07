@@ -1,74 +1,49 @@
-# 🧠 Pensa v0.4
+# 🧠 Pensa v0.5
 
-> El llenguatge de programació educatiu en català per aprendre a pensar abans de programar.
+> Aprèn a pensar. Després programa.
 
+Pensa és un llenguatge de programació educatiu en català dissenyat per facilitar l'aprenentatge dels conceptes fonamentals de la programació d'una manera clara, intuïtiva i progressiva.
 
-
-# 📖 Què és Pensa?
-
-**Pensa** és un llenguatge de programació educatiu dissenyat per ajudar estudiants a aprendre:
-
-- Pensament computacional
-- Algorismes
-- Variables
-- Condicions
-- Bucles
-- Funcions
-- Estructures de dades
-
-sense haver d'aprendre primer una sintaxi complicada.
-
-L'objectiu és que el codi sigui tan llegible com sigui possible.
-
-Per exemple:
-
-```text
-guarda 18 dins edat
-
-si edat >= 18
-
-    mostra "Ets major d'edat"
-
-si no
-
-    mostra "Ets menor d'edat"
-
-acaba
-```
-
-Encara que mai hagis programat, probablement entens què fa.
+L'objectiu principal és ajudar l'alumne a desenvolupar pensament computacional abans de preocupar-se per sintaxis complexes.
 
 ---
 
 # 🎯 Filosofia
 
-La filosofia de Pensa és simple:
+La majoria de llenguatges obliguen a aprendre una sintaxi complicada abans d'entendre la programació. Pensa fa exactament el contrari.
 
-> Primer aprèn a pensar.
->
-> Després aprendràs qualsevol altre llenguatge.
+En lloc d'escriure:
 
-Els conceptes que s'aprenen amb Pensa es poden transferir fàcilment a:
+```python
+resultat = suma(10, 5)
+print(resultat)
+```
 
-- Python
-- JavaScript
-- Java
-- C#
-- C++
-- Rust
-- Go
+escrius:
 
-i pràcticament qualsevol llenguatge modern.
+```text
+guarda crida suma 10 5 dins resultat
+mostra resultat
+```
+
+Això permet concentrar-se en els conceptes importants:
+
+- Variables
+- Funcions
+- Paràmetres
+- Retorns
+- Algorismes
+- Resolució de problemes
 
 ---
 
-# 🚀 Inici ràpid
+# 🚀 Instal·lació
 
 ## Requisits
 
 - Python 3.10 o superior
 
-Comprova la teva versió:
+Comprova la versió instal·lada:
 
 ```bash
 python --version
@@ -76,7 +51,13 @@ python --version
 
 ---
 
-## Executar un programa
+# ▶ Executar un programa
+
+```bash
+python pensa.py programa.pensa
+```
+
+Exemple:
 
 ```bash
 python pensa.py examples/demo.pensa
@@ -84,18 +65,12 @@ python pensa.py examples/demo.pensa
 
 ---
 
-# 📝 Hola Món
+# 👋 Primer programa
 
-Crea un fitxer:
+## hola.pensa
 
 ```text
 mostra "Hola món"
-```
-
-Executa'l:
-
-```bash
-python pensa.py hola.pensa
 ```
 
 Resultat:
@@ -108,7 +83,7 @@ Hola món
 
 # 📦 Variables
 
-Les variables permeten emmagatzemar dades.
+Les variables serveixen per guardar informació.
 
 ## Crear una variable
 
@@ -134,11 +109,10 @@ amb valor:
 
 ```text
 guarda 25 dins edat
-
 mostra edat
 ```
 
-Sortida:
+Resultat:
 
 ```text
 25
@@ -146,16 +120,117 @@ Sortida:
 
 ---
 
-# 🔢 Operacions
+# 🔢 Nombres
 
-## Sumar
+Pensa suporta nombres enters.
+
+Exemples:
 
 ```text
-guarda 10 dins punts
+0
+10
+-5
+100
+```
 
-suma 5 a punts
+---
 
-mostra punts
+# 📝 Text
+
+Els textos s'escriuen entre cometes.
+
+```text
+"Hola"
+"Barcelona"
+"Programació"
+```
+
+Exemple:
+
+```text
+guarda "Francesc" dins nom
+mostra nom
+```
+
+Resultat:
+
+```text
+Francesc
+```
+
+---
+
+# ⚙️ Funcions
+
+Les funcions permeten reutilitzar codi. Una funció és un bloc d'instruccions que es pot executar tantes vegades com sigui necessari.
+
+---
+
+# Crear una funció
+
+```text
+funcio saluda
+    retorna "Hola"
+acaba
+```
+
+---
+
+# Executar una funció
+
+```text
+guarda crida saluda dins resultat
+mostra resultat
+```
+
+Resultat:
+
+```text
+Hola
+```
+
+---
+
+# 📥 Paràmetres
+
+Els paràmetres permeten enviar informació a una funció.
+
+## Exemple
+
+```text
+funcio identitat valor
+    retorna valor
+acaba
+```
+
+Execució:
+
+```text
+guarda crida identitat 10 dins resultat
+mostra resultat
+```
+
+Resultat:
+
+```text
+10
+```
+
+---
+
+# 📥📥 Dos paràmetres
+
+```text
+funcio suma a b
+    retorna a + b
+acaba
+```
+
+Execució:
+
+```text
+guarda crida suma 10 5 dins resultat
+mostra resultat
 ```
 
 Resultat:
@@ -166,372 +241,420 @@ Resultat:
 
 ---
 
-## Restar
+# 📥📥📥 Tres paràmetres
 
 ```text
-guarda 10 dins vides
-
-resta 2 a vides
-
-mostra vides
-```
-
-Resultat:
-
-```text
-8
-```
-
----
-
-# 🤔 Condicions
-
-Les condicions permeten prendre decisions.
-
-## Exemple
-
-```text
-guarda 16 dins edat
-
-si edat >= 18
-
-    mostra "Adult"
-
-si no
-
-    mostra "Menor"
-
+funcio suma3 a b c
+    retorna a + b + c
 acaba
 ```
 
+Execució:
+
+```text
+guarda crida suma3 1 2 3 dins resultat
+mostra resultat
+```
+
 Resultat:
 
 ```text
-Menor
+6
 ```
 
 ---
 
-## Operadors disponibles
+# 🎁 Retornar valors
+
+Les funcions poden retornar un valor mitjançant la instrucció:
 
 ```text
->
-<
->=
-<=
-==
-!=
+retorna
 ```
 
----
-
-## Operadors lògics
-
-### I
+Exemple:
 
 ```text
-si nota >= 5 i nota < 10
-```
-
-### O
-
-```text
-si resposta == 1 o resposta == 2
-```
-
----
-
-# 🔁 Repeticions
-
-## Repeteix
-
-```text
-repeteix 3 vegades
-
-    mostra "Hola"
-
+funcio resposta
+    retorna 42
 acaba
 ```
 
+Utilització:
+
+```text
+guarda crida resposta dins resultat
+mostra resultat
+```
+
 Resultat:
 
 ```text
-Hola
-Hola
-Hola
+42
 ```
 
 ---
 
-# 🔄 Mentre
+# ➕ Operacions matemàtiques
 
-Permet repetir mentre una condició sigui certa.
+## Suma
 
 ```text
-guarda 0 dins comptador
+retorna a + b
+```
 
-mentre comptador < 5
+---
 
-    mostra comptador
+## Resta
 
-    suma 1 a comptador
+```text
+retorna a - b
+```
 
+---
+
+## Multiplicació
+
+```text
+retorna a * b
+```
+
+---
+
+## Divisió
+
+```text
+retorna a / b
+```
+
+---
+
+# Exemple: doble
+
+```text
+funcio doble x
+    retorna x * 2
 acaba
 ```
 
-Resultat:
+Execució:
 
 ```text
-0
-1
-2
-3
-4
-```
-
----
-
-# 📚 Llistes
-
-Una llista és un conjunt de valors.
-
-## Crear una llista
-
-```text
-guarda [10,20,30] dins notes
-```
-
----
-
-## Mostrar una llista
-
-```text
-mostra notes
+guarda crida doble 7 dins resultat
+mostra resultat
 ```
 
 Resultat:
 
 ```text
-[10,20,30]
+14
 ```
 
 ---
 
-# 🔍 Recorregut de llistes
-
-## Per cada
+# Exemple complet
 
 ```text
-guarda [10,20,30] dins notes
-
-per cada nota dins notes
-
-    mostra nota
-
+funcio suma a b
+    retorna a + b
 acaba
+
+funcio doble x
+    retorna x * 2
+acaba
+
+guarda crida suma 10 5 dins resultat
+mostra resultat
+
+guarda crida doble resultat dins final
+mostra final
 ```
 
 Resultat:
 
 ```text
-10
-20
+15
 30
 ```
 
 ---
 
-# ⚙️ Funcions
+# 🔒 Variables locals
 
-Les funcions permeten reutilitzar codi.
+Els paràmetres d'una funció no modifiquen les variables globals.
 
-## Definir una funció
-
-```text
-funcio saluda
-
-    mostra "Hola"
-
-acaba
-```
-
----
-
-## Executar una funció
+Exemple:
 
 ```text
-crida saluda
-```
+guarda 100 dins x
 
----
-
-## Exemple complet
-
-```text
-funcio saluda
-
-    mostra "Hola"
-
+funcio prova x
+    retorna x + 1
 acaba
 
-crida saluda
+guarda crida prova 5 dins resultat
+mostra resultat
+mostra x
 ```
 
 Resultat:
 
 ```text
-Hola
+6
+100
+```
+
+La variable global continua valent:
+
+```text
+100
 ```
 
 ---
 
-# 💬 Comentaris
+# ✅ Casos validats
 
-Els comentaris serveixen per explicar el programa.
+La versió actual ha estat validada amb les proves següents:
 
-Qualsevol línia que comenci amb:
+### Funció simple
 
 ```text
-#
+funcio f
+    retorna 1
+acaba
+```
+✅ PASS
+
+---
+
+### Funció amb un paràmetre
+
+```text
+funcio identitat x
+    retorna x
+acaba
+```
+✅ PASS
+
+---
+
+### Funció amb dos paràmetres
+
+```text
+funcio suma a b
+    retorna a + b
+acaba
+```
+✅ PASS
+
+---
+
+### Funció amb tres paràmetres
+
+```text
+funcio suma3 a b c
+    retorna a + b + c
+acaba
+```
+✅ PASS
+
+---
+
+### Retorn de text
+
+```text
+funcio nom
+    retorna "Francesc"
+acaba
+```
+✅ PASS
+
+---
+
+### Variables locals
+
+```text
+guarda 100 dins x
+funcio prova x
+    retorna x + 1
+acaba
+```
+✅ PASS
+
+---
+
+# ❌ Errors comuns
+
+## Funció inexistent
+
+Programa:
+
+```text
+crida noExisteix
 ```
 
-serà ignorada.
-
-Exemple:
+Error:
 
 ```text
-# Aquest és un comentari
-
-mostra "Hola"
+Funció inexistent: noExisteix
 ```
 
 ---
 
-# 📂 Exemple complet
+## Nombre incorrecte de paràmetres
+
+Programa:
 
 ```text
-# Exemple de Pensa
-
-mostra "Benvingut"
-
-funcio saluda
-
-    mostra "Hola alumne"
-
+funcio suma a b
+    retorna a + b
 acaba
 
-crida saluda
-
-guarda [1,2,3] dins numeros
-
-per cada numero dins numeros
-
-    mostra numero
-
-acaba
-
-guarda 0 dins comptador
-
-mentre comptador < 3
-
-    mostra comptador
-
-    suma 1 a comptador
-
-acaba
+guarda crida suma 10 dins resultat
 ```
 
-Sortida:
+Error:
 
 ```text
-Benvingut
-Hola alumne
-1
-2
-3
-0
-1
-2
+La funció suma necessita 2 paràmetres.
 ```
 
 ---
 
-# 🏗️ Arquitectura del projecte
+# 📂 Exemple de projecte
 
 ```text
-pensa/
+projecte/
 │
 ├── pensa.py
-├── lexer.py
-├── parser.py
-├── ast_nodes.py
-├── interpreter.py
-├── errors.py
 │
 ├── examples/
-│   └── demo.pensa
+│   ├── hola.pensa
+│   ├── suma.pensa
+│   └── funcions.pensa
 │
 └── README.md
 ```
 
 ---
 
-# 📌 Estat del projecte
+# ✅ Funcionalitats implementades
 
-Pensa v0.4 és una versió experimental.
+## Variables
+```text
+guarda
+```
 
-Implementat:
+## Sortida
+```text
+mostra
+```
 
-- ✅ Variables
-- ✅ Condicions
-- ✅ Repeticions
-- ✅ Funcions bàsiques
-- ✅ Llistes
-- ✅ Recorreguts
-- ✅ Arquitectura modular
+## Funcions
+```text
+funcio
+crida
+retorna
+```
 
-Previst per a futures versions:
+## Assignació de resultats
+```text
+guarda crida suma 10 5 dins resultat
+```
 
-- 🔜 Funcions amb paràmetres
-- 🔜 Retorns (`retorna`)
-- 🔜 Diccionaris
-- 🔜 Classes i objectes
-- 🔜 Imports
-- 🔜 Traducció a Python
-- 🔜 Diagrames de flux
-- 🔜 Editor web
-- 🔜 Extensió VS Code
-- 🔜 Mode professor
+## Paràmetres
+```text
+funcio suma a b
+```
+
+## Expressions matemàtiques
+```text
++
+-
+*
+/
+```
+
+## Errors bàsics
+```text
+Funció inexistent
+Nombre incorrecte de paràmetres
+```
 
 ---
 
-# 🤝 Contribuir
+# 🚧 Limitacions actuals
 
-Les contribucions són benvingudes.
+Encara no estan implementats:
 
-Idees especialment interessants:
-
-- Noves instruccions educatives
-- Millor gestió d'errors
-- Exercicis per a estudiants
-- Traducció a altres idiomes
-- Diagrames automàtics
-- Integració amb entorns educatius
+```text
+si
+si no
+mentre
+repeteix
+llistes
+per cada
+imports
+mòduls
+AST complet
+mode professor
+IDE web
+traductor a Python
+```
 
 ---
 
-# 📜 Llicència
+# 🛣️ Full de ruta
 
-MIT License
+## v0.6 Objectius:
 
-Pots utilitzar, modificar i distribuir aquest projecte lliurement.
+```text
+si
+si no
+mentre
+repeteix
+```
+
+---
+
+## v0.7 Objectius:
+
+```text
+llistes
+per cada
+text avançat
+```
+
+---
+
+## v0.8 Objectius:
+
+```text
+imports
+fitxers
+mòduls
+```
+
+---
+
+## v1.0 Objectius:
+
+```text
+AST complet
+parser formal
+depurador visual
+IDE web
+mode professor
+traductor a Python
+extensió VS Code
+```
 
 ---
 
 # ❤️ Pensa
 
-> La programació no consisteix a escriure codi.
+> La programació no consisteix a memoritzar sintaxi.
 >
-> Consisteix a aprendre a pensar de manera ordenada.
+> Consisteix a aprendre a resoldre problemes.
 >
-> **Pensa t'ajuda a fer aquest primer pas.**
+> Pensa t'ajuda a fer aquest primer pas.
