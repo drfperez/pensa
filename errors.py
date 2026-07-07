@@ -1,0 +1,2 @@
+class PensaError(Exception):
+    pass
